@@ -1,6 +1,9 @@
 # DT money
 Simple project to administrate the personal finances, using React, Node and Styled Components library. The MirageJS is used to mock the API.
 
+## Layout
+The layout is availabe in [Figma](https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)?node-id=0%3A1) 
+
 # First running
 ```
 yarn start
@@ -16,6 +19,7 @@ yarn start
         - Header
         - Summary
         - TransactionsTable
+        - NewTransactionModal
     - services
         api.ts
     - styles
