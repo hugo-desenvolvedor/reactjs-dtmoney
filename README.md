@@ -26,13 +26,17 @@ yarn start
 ## Dependencies
 ```
 yarn add styled-components
-yarn add --saveDev @types/styled-components
+yarn add @types/styled-components -D
 yarn add miragejs
-yarn add --saveDev @types/miragejs
+yarn add @types/miragejs -D
 yarn add axios
+yarn add @types/axios -D
+yarn add react-modal
+yarn add @types/react-modal -D
 ```
 
 ## Documentation
 * [Create React App](https://create-react-app.dev/docs/getting-started/)
 * [Create React App Custom Templates](https://create-react-app.dev/docs/custom-templates/)
 * [Mirage JS](https://miragejs.com/docs/getting-started/introduction/)
+* [React Modal](https://github.com/reactjs/react-modal)
