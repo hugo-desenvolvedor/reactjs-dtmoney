@@ -37,6 +37,7 @@ yarn add axios
 yarn add @types/axios -D
 yarn add react-modal
 yarn add @types/react-modal -D
+yarn add polished
 ```
 
 ## Documentation

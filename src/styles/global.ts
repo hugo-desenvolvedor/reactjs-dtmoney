@@ -12,6 +12,9 @@ export const GlobalStyle = createGlobalStyle`
 
         --background: #f0f2f5;
         --shape: #ffffff;
+
+        --button-border: 1px solid #d7d7d7;
+        --button-border-color: #d7d7d7;
     }
     
     * {
@@ -74,5 +77,19 @@ export const GlobalStyle = createGlobalStyle`
         padding: 3rem;
         position: relative;
         border-radius: 0.25rem;
+    }
+
+    .react-modal-close {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        border: 0;
+        background: transparent;
+
+        transition: filter 0.2;
+
+        &:hover {
+            filter: brightness(0.8)
+        }
     }
 `
