@@ -13,16 +13,16 @@ export function TransactionTypeContainer() {
          <RadioBox
             isActive={type === 'deposit'}
             activeColor={'green'}
-            onClick={() => { setType('deposit') }}>
-            <img src={incomeImg} alt="Deposit" />
-            Deposit
+            onClick={() => { setType('deposit') }}
+        >
+            <img src={incomeImg} alt="Deposit" />Deposit
         </RadioBox>
         <RadioBox
             isActive={type === 'withdraw'}
             activeColor={'red'}
-            onClick={() => { setType('withdraw') }}>
-            <img src={outcomeImg} alt="Withdraw" />
-            Withdraw
+            onClick={() => { setType('withdraw') }}
+        >
+            <img src={outcomeImg} alt="Withdraw" />Withdraw
         </RadioBox>
      </Container>
   )   
