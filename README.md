@@ -45,3 +45,4 @@ yarn add polished
 * [Create React App Custom Templates](https://create-react-app.dev/docs/custom-templates/)
 * [Mirage JS](https://miragejs.com/docs/getting-started/introduction/)
 * [React Modal](https://github.com/reactjs/react-modal)
+* [Styled Components](https://styled-components.com/docs/api#typescript)
