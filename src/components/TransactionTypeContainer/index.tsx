@@ -11,6 +11,7 @@ export function TransactionTypeContainer() {
   return (
      <Container>
          <RadioBox
+            type="button"
             isActive={type === 'deposit'}
             activeColor={'green'}
             onClick={() => { setType('deposit') }}
@@ -18,6 +19,7 @@ export function TransactionTypeContainer() {
             <img src={incomeImg} alt="Deposit" />Deposit
         </RadioBox>
         <RadioBox
+            type="button"
             isActive={type === 'withdraw'}
             activeColor={'red'}
             onClick={() => { setType('withdraw') }}

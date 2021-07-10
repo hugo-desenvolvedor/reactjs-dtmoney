@@ -17,7 +17,7 @@ export function TransactionsTable() {
     useEffect(() => {
         api.get('transactions')
         .then(response => setTransactions(response.data.transactions))
-    })
+    }, [])
 
     return (
         <Container>
@@ -31,17 +31,17 @@ export function TransactionsTable() {
                     </tr>
                 </thead>
                 <tbody>
-                    { transactions.map(transaction => ( 
+                    { transactions.map(transaction => (
                         <tr key={transaction.id}>
                             <td>
                                 {transaction.title}
                             </td>
-                            <td 
+                            <td
                                 className={transaction.type}
                             >
-                                { 
-                                    new Intl.NumberFormat('pt-BR', { 
-                                        style: 'currency', 
+                                {
+                                    new Intl.NumberFormat('pt-BR', {
+                                        style: 'currency',
                                         currency: 'BRL',
                                     }).format(transaction.amount)
                                 }

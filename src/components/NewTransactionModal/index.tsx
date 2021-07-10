@@ -25,8 +25,10 @@ export  function NewTransactionModal({isOpen = false, onRequestClose} : ModalPro
 
         const data = {
             title,
-            price,
+            amount: price,
             category,
+            type: 'deposit',
+            createdAt: new Date()
         }
 
         api.post('/transactions', data);
