@@ -2,7 +2,7 @@
 Simple project to administrate the personal finances, using React, Node and Styled Components library. The MirageJS is used to mock the API.
 
 ## Layout
-The layout is availabe in [Figma](https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)?node-id=0%3A1).
+The layout is available on [Figma](https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)?node-id=0%3A1).
 
 ## First running
 ```
@@ -20,12 +20,14 @@ yarn start
         - Summary
         - TransactionsTable
         - NewTransactionModal
+        - TransactionTypeContainer
     - services
         api.ts
     - styles
         - global.ts
     - index.tsx
     - App.tsx
+    - TransactionsContext.tsx
 
 ## Dependencies
 ```
