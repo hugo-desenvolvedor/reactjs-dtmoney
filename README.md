@@ -21,13 +21,14 @@ yarn start
         - TransactionsTable
         - NewTransactionModal
         - TransactionTypeContainer
+    - hooks
+        useTransactions.tsx
     - services
         api.ts
     - styles
         - global.ts
     - index.tsx
     - App.tsx
-    - TransactionsContext.tsx
 
 ## Dependencies
 ```
