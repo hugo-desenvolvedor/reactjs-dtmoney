@@ -1,11 +1,11 @@
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState, useContext } from 'react';
 import Modal from 'react-modal'
 import { Container } from './styles';
 import closeImg from '../../assets/close.svg';
 
 import { TransactionTypeContainer } from '../TransactionTypeContainer';
-import { api } from '../../services/api';
+import { useTransactions } from '../../hooks/useTransactions';
 
 
 Modal.setAppElement('#root');
@@ -20,18 +20,22 @@ export  function NewTransactionModal({isOpen = false, onRequestClose} : ModalPro
     const [price, setPrice] = useState(0);
     const [category, setCategory] = useState('');
 
-    function handleCreateNewTransaction(event: FormEvent) {
+    const { transactions, createTransaction }= useTransactions();
+
+    async function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault();
 
-        const data = {
+        await createTransaction({
             title,
             amount: price,
-            category,
-            type: 'deposit',
-            createdAt: new Date()
-        }
+            category, 
+            type: 'deposit'
+        })
 
-        api.post('/transactions', data);
+        setTitle('');
+        setPrice(0);
+        setCategory('');
+        onRequestClose();
     }
 
     return (
