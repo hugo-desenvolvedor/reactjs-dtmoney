@@ -3,10 +3,14 @@ import { Container, RadioBox } from "./styles";
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
 import { useEffect, useState } from "react";
+import { useType } from "../../hooks/useType";
 
 export function TransactionTypeContainer() {
+  const { type, setType } = useType();
 
-  const [ type, setType ] = useState('deposit');
+  function handleType(type: string) {
+      setType(type);
+  }
 
   return (
      <Container>
@@ -14,7 +18,7 @@ export function TransactionTypeContainer() {
             type="button"
             isActive={type === 'deposit'}
             activeColor={'green'}
-            onClick={() => { setType('deposit') }}
+            onClick={() => handleType('deposit')}
         >
             <img src={incomeImg} alt="Deposit" />Deposit
         </RadioBox>
@@ -22,7 +26,7 @@ export function TransactionTypeContainer() {
             type="button"
             isActive={type === 'withdraw'}
             activeColor={'red'}
-            onClick={() => { setType('withdraw') }}
+            onClick={() => handleType('withdraw')}
         >
             <img src={outcomeImg} alt="Withdraw" />Withdraw
         </RadioBox>

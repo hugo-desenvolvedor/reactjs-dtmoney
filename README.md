@@ -12,23 +12,36 @@ yarn start
 ## Directory structure
 - public
     - index.html
+        * html base page
 - src
-    - assets
+    - assets //images
     - components
         - Dashboard
+            * Top and summary
         - Header
-        - Summary
-        - TransactionsTable
+            * New transaction button
         - NewTransactionModal
+            * Transaction modal and type container
+        - Summary
+            * Total of deposits and withdraws
+        - TransactionsTable
+            * Transactions table content
         - TransactionTypeContainer
+            * Deposit and Withdraw fake checkbox
     - hooks
-        useTransactions.tsx
+        - useTransactions.tsx
+            * Complex Context, Provider and hook transactions
+        - useType
+            * Simple Context, Provider and hook to fake type checkbox
     - services
-        api.ts
+        - api.ts
+            * Set base api url using Axios
     - styles
         - global.ts
-    - index.tsx
     - App.tsx
+    - index.tsx
+        * Fake api using MirageJS
+        * Render
 
 ## Dependencies
 ```
@@ -49,3 +62,5 @@ yarn add polished
 * [Mirage JS](https://miragejs.com/docs/getting-started/introduction/)
 * [React Modal](https://github.com/reactjs/react-modal)
 * [Styled Components](https://styled-components.com/docs/api#typescript)
+* [Unary Plus](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+* [Intl API](https://medium.com/@iamgbayer/introdu%C3%A7%C3%A3o-a-intl-api-b13b5f6bef54)

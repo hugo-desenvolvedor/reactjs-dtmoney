@@ -5,6 +5,7 @@ import { Container } from './styles';
 import closeImg from '../../assets/close.svg';
 
 import { TransactionTypeContainer } from '../TransactionTypeContainer';
+import { useType } from '../../hooks/useType';
 import { useTransactions } from '../../hooks/useTransactions';
 
 
@@ -15,12 +16,13 @@ type ModalProps = {
     onRequestClose: () => void;
 }
         
-export  function NewTransactionModal({isOpen = false, onRequestClose} : ModalProps) {
+export function NewTransactionModal({isOpen = false, onRequestClose} : ModalProps) {
     const [title, setTitle] = useState('');
     const [price, setPrice] = useState(0);
     const [category, setCategory] = useState('');
 
-    const { transactions, createTransaction }= useTransactions();
+    const { createTransaction }= useTransactions();
+    const { type, setType } = useType();
 
     async function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault();
@@ -28,13 +30,14 @@ export  function NewTransactionModal({isOpen = false, onRequestClose} : ModalPro
         await createTransaction({
             title,
             amount: price,
-            category, 
-            type: 'deposit'
+            category,
+            type
         })
 
         setTitle('');
         setPrice(0);
         setCategory('');
+        setType('deposit');
         onRequestClose();
     }
 
